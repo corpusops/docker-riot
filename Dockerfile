@@ -6,6 +6,7 @@ ENV DEFAULT_IS_URL "https://vector.im"
 ENV BRAND "Riot"
 ENV INTEGRATIONS_UI_URL "https://scalar.vector.im/"
 ENV INTEGRATIONS_REST_URL "https://scalar.vector.im/api"
+ENV BUG_URL "https://riot.im/bugreports/submit"
 
 RUN set -ex;apk update \
     && apk add --no-cache \

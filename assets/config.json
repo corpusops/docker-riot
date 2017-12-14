@@ -4,11 +4,22 @@
     "brand": "{{BRAND}}",
     "integrations_ui_url": "{{INTEGRATIONS_UI_URL}}",
     "integrations_rest_url": "{{INTEGRATIONS_REST_URL}}",
-    "bug_report_endpoint_url": "https://riot.im/bugreports/submit",
+    "bug_report_endpoint_url": "{{BUG_URL}}",
+    "features": {
+        "feature_groups": "labs",
+        "feature_pinning": "labs"
+    },
+    "default_federate": true,
     "enableLabs": true,
     "roomDirectory": {
         "servers": [
+            "matrix.makina-corpus.net",
             "matrix.org"
         ]
+    },
+    "welcomeUserId": "@riot-bot:matrix.org",
+    "piwik": {
+        "url": "https://piwik.riot.im/",
+        "siteId": 1
     }
 }

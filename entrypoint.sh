@@ -1,16 +1,17 @@
 #!/bin/sh
-
 DEFAULT_HS_URL="$DEFAULT_HS_URL"
 DEFAULT_IS_URL="$DEFAULT_IS_URL"
 BRAND="$BRAND"
 INTEGRATIONS_UI_URL="$INTEGRATIONS_UI_URL"
 INTEGRATIONS_REST_URL="$INTEGRATIONS_REST_URL"
-
-sed -i "s#{{DEFAULT_HS_URL}}#${DEFAULT_HS_URL}#" /riot-web/webapp/config.json
-sed -i "s#{{DEFAULT_IS_URL}}#${DEFAULT_IS_URL}#" /riot-web/webapp/config.json
-sed -i "s#{{BRAND}}#${BRAND}#" /riot-web/webapp/config.json
-sed -i "s#{{INTEGRATIONS_UI_URL}}#${INTEGRATIONS_UI_URL}#" /riot-web/webapp/config.json
-sed -i "s#{{INTEGRATIONS_REST_URL}}#${INTEGRATIONS_REST_URL}#" /riot-web/webapp/config.json
-
-cd riot-web
+p=/riot-web
+cfg=$p/config.json
+set -eux
+sed -i "s#{{BUG_URL}}#${BUG_URL}#"                             $cfg
+sed -i "s#{{DEFAULT_HS_URL}}#${DEFAULT_HS_URL}#"               $cfg
+sed -i "s#{{DEFAULT_IS_URL}}#${DEFAULT_IS_URL}#"               $cfg
+sed -i "s#{{BRAND}}#${BRAND}#"                                 $cfg
+sed -i "s#{{INTEGRATIONS_UI_URL}}#${INTEGRATIONS_UI_URL}#"     $cfg
+sed -i "s#{{INTEGRATIONS_REST_URL}}#${INTEGRATIONS_REST_URL}#" $cfg
+cd $p
 exec http-server -p 8080 -A 0.0.0.0 -c 3500
