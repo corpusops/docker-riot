@@ -4,6 +4,9 @@
     "brand": "{{BRAND}}",
     "integrations_ui_url": "{{INTEGRATIONS_UI_URL}}",
     "integrations_rest_url": "{{INTEGRATIONS_REST_URL}}",
+    "integrations_widgets_urls": "{{INTEGRATIONS_WIDGETS_URL}}",
+    "integrations_jitsi_widget_url": "{{INTEGRATIONS_WIDGETSJITSI_URL}}",
+    "default_theme": "{{DEFAULT_THEME}}",
     "bug_report_endpoint_url": "{{BUG_URL}}",
     "features": {
         "feature_groups": "labs",
@@ -18,8 +21,5 @@
         ]
     },
     "welcomeUserId": "@riot-bot:matrix.org",
-    "piwik": {
-        "url": "https://piwik.riot.im/",
-        "siteId": 1
-    }
+    "piwik": {}
 }
