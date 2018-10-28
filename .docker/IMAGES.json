@@ -1,10 +1,15 @@
 {
-  "images": [ 
+  "images": [
+    {
+      "tag": "corpusops/riot:0.17.5",
+      "builder_type": "docker",
+      "extra_args": "--build-arg VERSION={img_parts[tag]}"
+    },
     {
       "tag": "corpusops/riot:0.16.4-rc.1",
       "builder_type": "docker",
       "extra_args": "--build-arg VERSION={img_parts[tag]}"
-    }, 
+    },
     {
       "tag": "corpusops/riot:0.16.0",
       "builder_type": "docker",
