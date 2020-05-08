@@ -23,8 +23,8 @@ RUN set -ex;apk update \
     npm install -g webpack http-server \
     && curl -L "https://github.com/vector-im/riot-web/releases/download/v$VERSION/riot-v$VERSION.tar.gz" -o /riot.tgz \
     && tar -xv -C / -f /riot.tgz \
+    && mv -vf /riot-v* /riot-web \
     && rm riot.tgz \
-    && mv riot-* riot-web \
     ; \
     apk del \
         git \
