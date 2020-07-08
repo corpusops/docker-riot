@@ -20,6 +20,7 @@
             "matrix.org"
         ]
     },
-
-    "piwik": {}
+    "piwik": {},
+    "im.vector.riot.jitsi": {"preferredDomain": "{{ .Env.JITSI }}"},
+    "jitsi": {"preferredDomain": "{{ .Env.JITSI }}"}
 }
