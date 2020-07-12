@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:lts-alpine
 
 ARG VERSION=0.13.3
 ENV DEFAULT_HS_URL "https://matrix.org"
