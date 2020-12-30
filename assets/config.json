@@ -1,24 +1,21 @@
 {
-    "default_hs_url": "{{DEFAULT_HS_URL}}",
-    "default_is_url": "{{DEFAULT_IS_URL}}",
-    "brand": "{{BRAND}}",
-    "integrations_ui_url": "{{INTEGRATIONS_UI_URL}}",
-    "integrations_rest_url": "{{INTEGRATIONS_REST_URL}}",
-    "integrations_widgets_urls": {{INTEGRATIONS_WIDGETS_URL}},
-    "integrations_jitsi_widget_url": "{{INTEGRATIONS_WIDGETSJITSI_URL}}",
-    "default_theme": "{{DEFAULT_THEME}}",
-    "bug_report_endpoint_url": "{{BUG_URL}}",
+    "default_hs_url": "{{ .Env.DEFAULT_HS_URL }}",
+    "default_is_url": "{{ .Env.DEFAULT_IS_URL }}",
+    "brand": "{{ .Env.BRAND }}",
+    "integrations_ui_url": "{{ .Env.INTEGRATIONS_UI_URL }}",
+    "integrations_rest_url": "{{ .Env.INTEGRATIONS_REST_URL }}",
+    "integrations_widgets_urls": {{ .Env.INTEGRATIONS_WIDGETS_URL }},
+    "integrations_jitsi_widget_url": "{{ .Env.INTEGRATIONS_WIDGETSJITSI_URL }}",
+    "default_theme": "{{ .Env.DEFAULT_THEME }}",
+    "bug_report_endpoint_url": "{{ .Env.BUG_URL }}",
     "features": {
         "feature_groups": "labs",
         "feature_pinning": "labs"
     },
-    "default_federate": true,
-    "enableLabs": true,
+    "default_federate": {{ .Env.FEDERATE }},
+    "enableLabs": {{ .Env.ENABLE_LABS }},
     "roomDirectory": {
-        "servers": [
-            "matrix.makina-corpus.net",
-            "matrix.org"
-        ]
+        "servers": {{ .Env.ID_SERVERS }}
     },
     "piwik": {},
     "im.vector.riot.jitsi": {"preferredDomain": "{{ .Env.JITSI }}"},
