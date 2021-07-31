@@ -2,6 +2,7 @@
     "default_hs_url": "{{ .Env.DEFAULT_HS_URL }}",
     "default_is_url": "{{ .Env.DEFAULT_IS_URL }}",
     "brand": "{{ .Env.BRAND }}",
+    "showLabsSettings": true,
     "integrations_ui_url": "{{ .Env.INTEGRATIONS_UI_URL }}",
     "integrations_rest_url": "{{ .Env.INTEGRATIONS_REST_URL }}",
     "integrations_widgets_urls": {{ .Env.INTEGRATIONS_WIDGETS_URL }},
