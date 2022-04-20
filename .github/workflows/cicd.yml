@@ -40,7 +40,7 @@ jobs:
       fail-fast: false
       matrix:
         IMGV:
-        - 1.7.20
+        - 1.7.31
         IMG: ["corpusops/riot"]
         DFILE: ["Dockerfile"]
         DPATH: ["."]
