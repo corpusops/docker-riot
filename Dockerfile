@@ -1,5 +1,5 @@
 FROM node:lts-alpine as builder
-ARG VERSION=1.7.16
+ARG VERSION=1.7.31
 ENV VERSION=$VERSION
 RUN set -ex;apk update \
     && apk add --no-cache \
@@ -26,7 +26,7 @@ COPY --from=builder /riot-web ./
 COPY nginx.conf /etc
 COPY assets/config.json ./
 COPY entrypoint.sh /
-ARG VERSION=0.13.3
+ARG VERSION=1.7.31
 ENV VERSION=$VERSION
 ENV BRAND="Riot"
 ENV DOMAINS="localhost"
