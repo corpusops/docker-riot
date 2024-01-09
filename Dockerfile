@@ -8,7 +8,7 @@ RUN set -ex;apk update \
         libevent \
         libffi \
         libjpeg-turbo \
-        libssl1.1 \
+        libssl3 \
         nodejs \
         sqlite-libs \
         unzip \
